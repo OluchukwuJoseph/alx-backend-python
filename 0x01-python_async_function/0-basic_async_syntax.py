@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """ This module contains the wait_random function """
-from asyncio import sleep
+import asyncio
 from random import uniform
 
 
@@ -10,5 +10,5 @@ async def wait_random(max_delay: int = 10) -> float:
     eventually returns it.
     """
     delay = uniform(0, max_delay)
-    await sleep(delay)
+    await asyncio.sleep(delay)
     return delay
